@@ -23,6 +23,7 @@ public class Resultado
 			imprimir+= pNombreJugador + ";" + pNumeroAdivinar + ";" + pNumeroIntentos + ";" + pEstadoPartida;
 			
 			
+			
 		}
 		catch(Exception e)
 		{
