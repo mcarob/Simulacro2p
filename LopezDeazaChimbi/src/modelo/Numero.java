@@ -16,7 +16,7 @@ public class Numero
 		numAd = new int [4];
 	}
 
-	public void cargarNum(int pNum, int pNum2, int pNum3, int pNum4)
+	public void ingresarNum(int pNum, int pNum2, int pNum3, int pNum4)
 	{
 		numAd[0] = pNum;
 		numAd[1] = pNum2;
