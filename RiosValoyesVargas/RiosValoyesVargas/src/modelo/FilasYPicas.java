@@ -6,6 +6,7 @@ public class FilasYPicas
 {
 	
 	private String[] digitosNumeroBuscado;
+	private String nombreJugador;
 	private int numeroUsuario;
 	private int intentos;
 	private boolean terminado;
@@ -17,6 +18,11 @@ public class FilasYPicas
 		numeroUsuario = 0000;
 		intentos = 0;
 		terminado = false;
+	}
+	
+	public void asignarNombreJugador(String pNombreJugador)
+	{
+		nombreJugador = pNombreJugador;
 	}
 	
 	public int validarFilas()

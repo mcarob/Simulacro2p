@@ -19,6 +19,7 @@ public class Principal
 	{
 		Principal controlador = new Principal();
 		boolean ganado = false;
+		modelo.asignarNombreJugador(vista.pedirDato("Ingrese el nombre del jugador"));
 		
 		while(ganado == false)
 		{					

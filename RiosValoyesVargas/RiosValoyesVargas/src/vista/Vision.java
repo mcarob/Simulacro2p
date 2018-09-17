@@ -18,6 +18,11 @@ public class Vision
 		modelo = pModelo;
 	}
 	
+	public String pedirDato(String pMensaje)
+	{
+		return JOptionPane.showInputDialog(null, pMensaje);
+	}
+	
 	public void pedirNumero()
 	{
 		try
