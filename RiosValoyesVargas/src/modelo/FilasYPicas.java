@@ -1,6 +1,6 @@
 package modelo;
 
-import controlador.Principal;
+import controlador.Controlador;
 
 public class FilasYPicas 
 {

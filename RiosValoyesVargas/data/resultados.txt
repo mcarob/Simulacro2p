@@ -1,0 +1,3 @@
+Sebastian;3568;5;Gano
+Vargas;3568;10;Perdio
+;3568;10;Perdio

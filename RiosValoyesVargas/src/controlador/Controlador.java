@@ -5,35 +5,31 @@ import modelo.Persistencia;
 import modelo.Resultado;
 import vista.Vision;
 
-public class Principal 
+public class Controlador 
 {
 	private static FilasYPicas modelo;
 	private static Vision vista;
 	private static Resultado resultado;
 	
-	public Principal()
+	public Controlador()
 	{
 		modelo = new FilasYPicas();
 		vista = new Vision(this, modelo);
 		resultado = new Resultado();
-	}
-	
-	public static void main(String[] args) 
-	{
-		Principal controlador = new Principal();
+		
 		boolean ganado = false;
 		modelo.asignarNombreJugador(vista.pedirDato("Ingrese el nombre del jugador"));
 		
-		while(ganado == false || modelo.darNumeroIntentos() <= Persistencia.MAX_INTENTOS)
-		{					
+		for(int i = 0; ganado == false && i < Persistencia.MAX_INTENTOS; i++)
+		{	
 			cambiarNumeroUsuario();
 			mostrarInformacion();
 			
 			ganado = modelo.ganado();
 		}
 		
-		
-		
+		guardarResultados();
+		vista.imprimirResultados();
 	}
 	
 	public static void cambiarNumeroUsuario()
@@ -56,8 +52,5 @@ public class Principal
 		
 		resultado.escribirResultados(nombreJugador, numeroAdivinar, numeroIntentos, estadoPartida);
 	}
-	
 
-
-	
 }

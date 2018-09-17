@@ -1,21 +1,26 @@
 package vista;
 
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import javax.xml.crypto.dsig.spec.ExcC14NParameterSpec;
 
-import controlador.Principal;
+import controlador.Controlador;
 import modelo.FilasYPicas;
+import modelo.Lectura;
 
 public class Vision 
 {
 	
-	private Principal controlador;
+	private Controlador controlador;
 	private FilasYPicas modelo;
+	private Lectura lectura;
 	
-	public Vision(Principal pControlador, FilasYPicas pModelo)
+	public Vision(Controlador pControlador, FilasYPicas pModelo)
 	{
 		controlador = pControlador;
 		modelo = pModelo;
+		lectura = new Lectura();
 	}
 	
 	public String pedirDato(String pMensaje)
@@ -31,12 +36,12 @@ public class Vision
 			int sNumero = Integer.parseInt(numero);
 			if(sNumero <= 0001 || sNumero > 9999)
 			{
-				throw new Exception("El sNumero Tiene Mas/Menos De Los Digitos Pedidos");
+				throw new Exception("El Numero Tiene Mas/Menos De Los Digitos Pedidos");
 
 			}
 			else if(numeroRepetido(sNumero) == true)
 			{
-				throw new Exception("Hay Un sNumero Repetido");
+				throw new Exception("Hay Un Numero Repetido");
 			}
 			else
 			{
@@ -73,5 +78,16 @@ public class Vision
 		}
 		
 		return repetido;
+	}
+	
+	public void imprimirResultados()
+	{
+		
+		ArrayList <String> datos =  lectura.cargarArchivo();
+		
+		for(int i = 0; i < datos.size(); i ++)
+		{
+			JOptionPane.showMessageDialog(null, datos.get(i));
+		}
 	}
 }
