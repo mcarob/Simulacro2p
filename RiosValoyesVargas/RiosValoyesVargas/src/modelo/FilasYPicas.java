@@ -130,10 +130,19 @@ public class FilasYPicas
 		return digitos;
 	}
 	
+	public String darNombreJugador()
+	{
+		return nombreJugador;
+	}
+	
 	public boolean ganado()
 	{
 		return terminado;
 	}
 	
+	public int darNumeroIntentos()
+	{
+		return intentos;
+	}
 }
 

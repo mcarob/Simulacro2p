@@ -12,7 +12,7 @@ public class Resultado
 		
 	}
 	
-	public void escribirResultados(String pNombreJugador, int pNumeroAdivinar, int pNumeroIntentos, boolean pEstadoPartida)
+	public void escribirResultados(String pNombreJugador, String pNumeroAdivinar, int pNumeroIntentos, boolean pEstadoPartida)
 	{
 		try
 		{
@@ -21,9 +21,9 @@ public class Resultado
 			
 			String imprimir = "";
 			imprimir+= pNombreJugador + ";" + pNumeroAdivinar + ";" + pNumeroIntentos + ";" + pEstadoPartida;
+			fw.write(imprimir);
 			
-			
-			
+			fw.close();
 		}
 		catch(Exception e)
 		{
