@@ -37,7 +37,7 @@ public class Interfaz {
 		String num4 = JOptionPane.showInputDialog("Introduzca el cuarto numero");
 		int	iNum4 = Integer.parseInt(num4);
 		
-		numero.cargarNum(iNum1, iNum2,iNum3, iNum4);
+		numero.ingresarNum(iNum1, iNum2,iNum3, iNum4);
 		String r = numero.CalcularPF();
 		JOptionPane.showMessageDialog(null, r);
 	}
