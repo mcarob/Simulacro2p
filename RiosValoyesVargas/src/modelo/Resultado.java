@@ -17,10 +17,13 @@ public class Resultado
 	{
 		try
 		{
+			//Creamos un File el cual tiene la ruta donde se guardaran la informacion
 			File archivo = new File("./data/resultados.txt");
 			FileWriter fw = new FileWriter(archivo, true);
+			//Creamos un printWriter donde se cargar el FileWriter y nos esceibira en el archivo de texto plano
 			PrintWriter pw = new PrintWriter(fw);
 			String imprimir = "";
+			//Observamos cual fue el estado de la partida para escribir si se gano o se perdio la misma
 			String estadoPartida = null;
 			if(pEstadoPartida == true)
 			{
@@ -30,9 +33,12 @@ public class Resultado
 			{
 				estadoPartida = "Perdio";
 			}
+			//Almacenamos toda la informacion en un String separandola por ";", para asi despues separarla
 			imprimir+= pNombreJugador + ";" + pNumeroAdivinar + ";" + pNumeroIntentos + ";" + estadoPartida;
+			//Escribimos la información sobre el archivo de texto plano
 			pw.println(imprimir);
 					
+			//Cerramos el flujo de datos
 			pw.close();
 		}
 		catch(Exception e)
