@@ -1,11 +1,11 @@
 package modelo;
 
-public class Persistencia
-{
+public class Mundo {
+
 	private int numero[]={7,3,1,9};
 	private int numIngresado[];
 
-	public Persistencia()
+	public Mundo()
 	{
 		numIngresado = new int [4];
 	}

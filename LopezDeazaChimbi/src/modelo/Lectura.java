@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Lectura {
-
 	private FileReader fr;
 	private BufferedReader bf;
 	private String path = "C:\\Users\\paula\\Documents\\Data\\resultados.txt";
